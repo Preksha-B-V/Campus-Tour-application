@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f9;
+    text-align: center;
+}
+
+/* Welcome Screen */
+.welcome-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-container img {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.welcome-container h1 {
+    font-size: 24px;
+    color: #007BFF;
+}
+
+/* Login Form */
+.form-container {
+    max-width: 400px;
+    margin: 120px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+button {
+    background: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Dashboard */
+nav {
+    background: #007BFF;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.section {
+    margin-top: 80px;
+    padding: 40px;
+    background: white;
+    border-radius: 12px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.calendar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+#calendar {
+    max-width: 70%;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-sidebar {
+    width: 25%;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-sidebar h3 {
+    color: #007BFF;
+    font-size: 18px;
+}
+
+#eventInfo {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+}
+
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMR University</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.8/index.global.min.js"></script>
+</head>
+<body>
+<!-- Welcome Screen -->
+<div id="welcomeScreen" class="welcome-container">
+    <img src="https://www.cmr.edu.in/wp-content/themes/cmr_university/new/images/Logo-CMRU.png" alt="CMR University">
+    <h1>Welcome to CMR University</h1>
+</div>
+
+<!-- Your existing content -->
+<div id="mainContent" style="display: none;">
+    <!-- Put your main website content here -->
+</div>
+
+<script>
+    // Hide the welcome screen after 3 seconds and show the main content
+    setTimeout(function () {
+        document.getElementById("welcomeScreen").style.display = "none";
+        document.getElementById("mainContent").style.display = "block";
+    }, 3000); // 3000ms = 3 seconds
+</script>
+
+</div>
+    <!-- Login Page -->
+    <div id="authForm" class="form-container">
+        <h1>Welcome to CMR University</h1>
+        <h2 id="formTitle">Login</h2>
+        <input type="text" id="name" placeholder="Name" style="display: none;">
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <select id="role">
+            <option value="student">Student</option>
+            <option value="faculty">Faculty</option>
+            <option value="parent">Parent</option>
+            <option value="admin">Administrator</option>
+        </select>
+        <button onclick="handleSubmit()">Submit</button>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="dashboard" style="display: none;">
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#maps">Maps</a></li>
+                <li><a href="#floormapping">Floor-based</a></li>
+                <li><a href="#facultyLocator">Faculty Locator</a></li>
+                <li><a href="#events">Upcoming Events</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+            </ul>
+        </nav>
+
+        <section id="about" class="section">
+            <h2>About CMR University</h2>
+            <p>CMR University is committed to academic excellence and innovation.The Motto of CMRU is  Nurturing creative thinkers to drive positive global change. CMR University (CMRU) is a private university located in Bangalore, Karnataka, India. Established in 2013 under the CMR University Act, it offers undergraduate, postgraduate, and doctoral programs in engineering, management, law, architecture, and social sciences. The campus covers an area of 60 acres and is recognized by UGC and accredited by the Association of Indian Universities (AIU) </p>
+        </section>
+
+        <section id="maps" class="section">
+            <h2>Campus Map</h2>
+            <iframe src="https://maps.google.com/maps?q=CMR%20University%20Lakeside%20Campus%20Bangalore&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+        </section>
+
+        <section id="floorBasedMap" class="section">
+            <h2>Floor-based map</h2>
+            <label for="FloorSelect">Select Floor-based:</label>
+            <select id="FloorSelect" onchange="displayFloor()">
+                <option value="First Floor">First Floor</option>
+                <option value="Second Floor">Second Floor</option>
+                <option value="Third Floor">Third Floor</option>
+                <option value="Fourth Floor">Fourth Floor</option>
+                <option value="Fifth Floor">Fifth Floor</option>
+            </select>
+            <div id="First Floor"></div>
+            <blockquote class="imgur-embed-pub" lang="en" data-id="MX22WKi">
+                <a href="https://imgur.com/MX22WKi">View post on imgur.com</a>
+            </blockquote>
+            <script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+
+            
+        </section>
+
+        <section id="facultyLocator" class="section">
+            <h2>Faculty Locator</h2>
+            <label for="departmentSelect">Select Department:</label>
+            <select id="departmentSelect" onchange="displayFaculty()">
+                <option value="Computer Science">Computer Science</option>
+                <option value="Electrical Engineering">Electrical Engineering</option>
+                <option value="Mechanical Engineering">Mechanical Engineering</option>
+                <option value="Civil Engineering">Civil Engineering</option>
+            </select>
+            <div id="facultyList"></div>
+            <button onclick="addFaculty()">Add Faculty</button>
+            <button onclick="removeFaculty()">Remove Faculty</button>
+        </section>
+
+        <section id="events" class="section">
+            <h2>Upcoming Events</h2>
+            <div class="calendar-container">
+                <div id="calendar"></div>
+                <div id="eventDetails" class="event-sidebar">
+                    <h3>Event Details</h3>
+                    <p id="eventInfo"> "Orientation Day", start: 2025-03-15, "For First year students", location: Block A, Room<br>
+                        "Tech Fest", start: 2025-03-07, location: Block C, SSCS, Room 203<br>
+                        "Annual Sports Meet", start: 2025-05-10, "Sports for Health", location: Sports Ground</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Include FullCalendar Library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.8/index.global.min.js"></script>
+        <script src="script.js"></script>
+        
+
+        <section id="reviews" class="section">
+            <h2>User Reviews</h2>
+            <textarea id="review" placeholder="Leave your review"></textarea>
+            <button onclick="submitReview()">Submit Review</button>
+            <div id="reviewsList"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
